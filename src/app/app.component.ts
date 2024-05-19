@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, importProvidersFrom } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { fakerDE as faker } from '@faker-js/faker';
+//import { lorem } from "faker"; you can create fake(name,address,phone,...)  but we used onlu lorem(random text)
+
 
 @Component({
   selector: 'app-root',
@@ -9,5 +12,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'typing';
+  randomtext : string =  faker.lorem.sentence();
+  onChangeInput(text:string){
+    console.log(text);
+
+  }
 }

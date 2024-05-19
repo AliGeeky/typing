@@ -5,11 +5,11 @@
       Typing Challeng
     </h1>
 
-    <p class="has-text-centered">Random Text</p>
+    <p class="has-text-centered">{{randomtext}}</p>
 
 
     <div class="field">
-      <input type="text" class="input">
+      <input type="text" class="input" (input)="onChangeInput($any($event.target).value)">
     </div>
     <div class="box has-text-centered">
       <h1 class="title">sucsess!</h1>
